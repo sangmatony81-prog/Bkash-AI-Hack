@@ -24,17 +24,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Download Gradle Wrapper JAR
-      run: |
-        mkdir -p gradle/wrapper
-        cd gradle/wrapper
-        if [ ! -f gradle-wrapper.jar ]; then
-          echo "Downloading gradle-wrapper.jar..."
-          curl -L https://services.gradle.org/distributions/gradle-8.9-bin.zip -o gradle-8.9-bin.zip
-          unzip -j gradle-8.9-bin.zip "gradle-8.9/lib/gradle-wrapper.jar" -d .
-          rm gradle-8.9-bin.zip
-        fi
-
     - name: Build APK with Gradle
       run: ./gradlew assembleDebug --stacktrace
 
