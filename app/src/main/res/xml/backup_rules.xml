@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+   Files created in the default locations will be backed up, as well
+   as any SharedPreferences instantiated by PreferenceManager. Construct
+   using PreferenceManager.getDefaultSharedPreferences() within the app.
+   -->
+    <exclude domain="sharedpref" path="PreferenceScreenKey.xml"/>
+</full-backup-content>
